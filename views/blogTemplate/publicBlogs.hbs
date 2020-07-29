@@ -1,0 +1,46 @@
+
+    <h1>Blogs</h1>
+<div class="row">
+    {{#each Blogs}}
+        <div class="col s12">
+            <div class="publicblog card">
+
+                <!--user icon-->
+                <div class="usericon chip">
+                     <img src="{{user.image}}" alt='user icon'>
+                     <!--go to user's portfolio-->
+                     <a href="/blogs/user/{{user_id}}">{{user.displayName}}</a>
+
+                </div>
+            
+            <!--edit icon-->
+            <div class="card-image">
+                {{#if (checkEdit user ../user)}}
+                    <a href="/blogs/edit/{{_id}}" class="btn-floating halfway-fab" >
+                    <i class="fas fa-edit"></i>
+                    </a>
+                {{/if}}
+            </div>
+                 
+            <div class="card-content center-align">
+                
+                <a href="blogs/{{_id}}" class="title"><h5>{{title}}</h5></a>
+
+                    
+                    <div class="content">
+                         <a href="blogs/{{_id}}" class="content">
+                        <!--Remove HTML style first then restrict the cotent-->
+                        <p>{{preView (removeHTML content) 150}}</p>
+                         </a>
+                    </div>
+                        <a href="blogs/{{_id}}" class=" btn green">Read More</a>
+            </div>
+
+
+          
+        </div>
+    </div>
+{{/each}}
+</div>    
+    
+

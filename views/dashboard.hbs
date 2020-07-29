@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dashboard.css">
+    <title>dashboard Page</title>
+</head>
+<body>
+    <!--add blog button-->
+    <div class="fixed-action-btn">
+        <a href="/blogs/add" class="btn-floating btn-large waves-effect waves-light red"><i class="fas fa-plus"></i></a>
+    </div>
+
+    <h3>Welcome {{name}}</h3>
+    {{#if blogs}}
+      <h6>Here are your blogs</h6>
+      <table class="striped">
+          <thead>
+              <tr>
+                  <th>Ttile</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              {{#each blogs}}
+              <tr>
+                  <td><a href="/blogs/{{_id}}">{{title}}</a></td>
+                  <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                  <td><spane class="dash-status">{{status}}</spane></td>
+                  <td>
+                      <!--edit button will redirect to the edit page-->
+                      <a href="/blogs/edit/{{_id}}" class="btn btn-float">
+                      <i class="fas fa-edit"></i>                      
+                      </a>
+                      
+                </td>
+              </tr>
+              {{/each}}
+          </tbody>
+      </table>
+    {{else}}
+    <h6>You haven't publish any blogs, Publish your first Story</h6>
+    {{/if}}   
+</body>
+</html>

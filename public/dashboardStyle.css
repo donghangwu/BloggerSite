@@ -1,0 +1,21 @@
+.title{
+    color: black;
+}
+.title :hover{
+    color: cornflowerblue;
+}
+.content{
+    color: black;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.content :hover{
+    color: deepskyblue;
+}
+.usericon{
+    margin-left: 10px;
+    margin-right: -100px;
+    margin-top: 20px;
+    float: left;
+}

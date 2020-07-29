@@ -1,0 +1,21 @@
+.login-container{
+    width: 40%;
+    margin: 10% 30%;
+    text-align: center;
+}
+body{
+    margin-top: 5%;
+    text-align: center;
+    background-image: url('login_background22.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.title{
+    color: darkblue;
+}
+.section{
+    color: white;
+    margin-top: 6%;
+    font-size: x-large;
+}
