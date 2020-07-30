@@ -1,21 +1,57 @@
-.title{
+.blog-preview{
     color: black;
+    
 }
-.title :hover{
-    color: cornflowerblue;
+.blog-preview :hover{
+    color: green;
+    
 }
+
 .content{
     color: black;
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
 }
-.content :hover{
-    color: deepskyblue;
-}
+
 .usericon{
     margin-left: 10px;
     margin-right: -100px;
     margin-top: 20px;
     float: left;
+}
+.btn-pos{
+    float: left;
+    margin-right: 10px;
+}
+.icon-sml{
+    height: 60px;
+}
+.wholeblog{
+   background-color: #F1E5C9;
+ 
+   
+}
+.blog-content{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+.publicBlogs{
+    background-image: url("/images/blogBG2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.eachPublic{
+    background-image: url("/images/blogBG2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   
+
+}
+.sidebar{
+    float: right;
 }

@@ -25,6 +25,9 @@ function removeHTML(str)
 
 function editBtn(blogOwner,loginUser)
 {
+    //visitor's mode
+    if(!loginUser)
+        return false;
     return blogOwner._id.toString()==loginUser._id.toString();
 }
 

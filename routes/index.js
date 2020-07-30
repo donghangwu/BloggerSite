@@ -23,6 +23,7 @@ router.get('/',alreadyAuthed,(req,res)=>{
 //description: login/dashboard
 //rote: get /dashboard
 //2nd arg to check if someone did not login and try to go dashboard
+//only authed user can go to dashboard
 router.get('/dashboard',checkAuth,async (req,res)=>{
     try {
         //fetch story from mongoDB

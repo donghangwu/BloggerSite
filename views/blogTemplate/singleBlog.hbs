@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="wholeblog">
+    
+
+<div class="row ">
+    <div class="col s12 m9">
+        <h3>{{blog.title}}
+             <!--edit icon-->
+             
+                {{#if (checkEdit blog.user user)}}
+                    <a href="/blogs/edit/{{blog._id}}" class="" >
+                    <i class="fas fa-edit"></i>
+                    </a>
+                {{/if}}
+            
+
+        </h3>
+        <div class="card wholeblog">
+            <div class="card-content blog-content">
+         
+                {{{blog.content}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m3 ">
+        <div class="card center-align wholeblog">
+            <div class="card-content">
+                <span class="card-title">Author: {{blog.user.displayName}}</span>
+                 <a href="/blogs/user/{{blog.user._id}}">
+                 <img src="{{blog.user.image}}" class="circle icon-sml">
+                 <div class="card-action">More From {{blog.user.displayName}}</div>
+                 
+                 </a>
+            </div>
+            </div>
+
+    </div>
+</div>
+    
+
+</body>
+</html>

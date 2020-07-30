@@ -1,15 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="publicBlogs">
+    <h1>{{scope}}'s Blogs</h1>
 
-    <h1>Blogs</h1>
-<div class="row">
+<div class="row eachPublic">
     {{#each Blogs}}
         <div class="col s12">
-            <div class="publicblog card">
+            <div class="eachPublic card">
 
                 <!--user icon-->
                 <div class="usericon chip">
                      <img src="{{user.image}}" alt='user icon'>
                      <!--go to user's portfolio-->
-                     <a href="/blogs/user/{{user_id}}">{{user.displayName}}</a>
+                     <a href="/blogs/user/{{user._id}}">{{user.displayName}}</a>
 
                 </div>
             
@@ -22,25 +30,25 @@
                 {{/if}}
             </div>
                  
-            <div class="card-content center-align">
+            <div class="card-content center-align blog-preview">
                 
-                <a href="blogs/{{_id}}" class="title"><h5>{{title}}</h5></a>
+                <a href="/blogs/{{_id}}" class="title"><h5>{{title}}</h5></a>
 
                     
                     <div class="content">
-                         <a href="blogs/{{_id}}" class="content">
+                         <a href="/blogs/{{_id}}" class="content">
                         <!--Remove HTML style first then restrict the cotent-->
-                        <p>{{preView (removeHTML content) 150}}</p>
+                        <p>{{preView (removeHTML content) 250}}</p>
                          </a>
                     </div>
-                        <a href="blogs/{{_id}}" class=" btn green">Read More</a>
+                        <a href="/blogs/{{_id}}" class=" btn green">Read More</a>
             </div>
-
-
-          
         </div>
     </div>
 {{/each}}
 </div>    
     
 
+
+</body>
+</html>
